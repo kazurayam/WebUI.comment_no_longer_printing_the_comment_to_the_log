@@ -8,16 +8,21 @@ class CommentKeywordMetaClass extends DelegatingMetaClass {
 		super(metaClass)
 	}
 
-	CommentKeywordMetaClass(Class theClass) {
-		super(theClass)
-	}
-
-	Object invokeMethod(Object object, String name, Object[] args) {
-		println "name is ${name}"
-		if (name =~ /comment/) {
+	
+	Object invokeMethod(Object object, String method, Object[] args) {
+		println "method=${method}"
+		try {
+			throw new RuntimeException()
+		} catch (Exception e) {
+			e.printStackTrace()
+		}
+		if (method == /comment/) {
 			println "Howdy!"
 		} else {
-			return super.invokeMethod(object, name, args)
+			return super.invokeMethod(object, method, args)
 		}
 	}
+	
+	
+	// http://groovy-lang.org/metaprogramming.html ExpandoMetaClass
 }

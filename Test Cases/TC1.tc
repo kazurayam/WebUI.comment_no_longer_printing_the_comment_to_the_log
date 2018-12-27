@@ -3,6 +3,6 @@
    <description></description>
    <name>TC1</name>
    <tag></tag>
-   <comment></comment>
+   <comment>Now it is $now!</comment>
    <testCaseGuid>751093d9-d539-49c5-9f9c-33733378410f</testCaseGuid>
 </TestCaseEntity>
